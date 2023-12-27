@@ -1,13 +1,19 @@
+import { useNavigate } from 'react-router-dom';
 import '../Css/Homepage.css';
 
-function App() {
+const Homepage =() => {
+    const navigate = useNavigate();
+    const toHomeVape = () => {
+        navigate('/homevape');
+    }
+    const toHomeGoodDudes = () =>{
+      navigate('/homegooddudes');
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        tangina
-      </header>
+    <div>
+        <button onClick = {toHomeVape}>VapeN'Hell</button>
+        <button onClick = {toHomeGoodDudes}>GoodDudes</button>
     </div>
   );
 }
-
-export default App;
+export default Homepage;
