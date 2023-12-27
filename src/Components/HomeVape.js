@@ -1,4 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+import '../Css/HomeVape.css';
+import Header from './Header';
+
 const HomeVape=()=>{
     const navigate = useNavigate();
     const homepage = () => {      
@@ -6,6 +9,7 @@ const HomeVape=()=>{
     }
     return(
         <div>
+            <Header/>
             VapeN'Hell
             <button onClick={homepage}>Home</button>
         </div>

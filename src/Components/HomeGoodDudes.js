@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-
-
+import Header from './Header';
 const HomeGoodDudes=()=>{
     const navigate = useNavigate();
     const homepage = () => {      
@@ -8,7 +7,8 @@ const HomeGoodDudes=()=>{
     }
     return(
         <div>
-            Home GoodDudes!!
+            <Header/>
+            GoodDudes!!
             <button onClick={homepage}>Home</button>
         </div>
     );

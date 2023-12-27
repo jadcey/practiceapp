@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.header-body{
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color: black;
+}
+.header-text{
+    text-indent: 50px;
+    color:aliceblue;
+    
+}
