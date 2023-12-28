@@ -1,22 +1,17 @@
-import { useNavigate } from 'react-router-dom';
 import '../Css/Homepage.css';
 import Header from './Header';
 import '../Css/Header.css';
 
 
-const Homepage =() => {
-    const navigate = useNavigate();
-    const toHomeVape = () => {
-        navigate('/homevape');
-    }
-    const toHomeGoodDudes = () =>{
-      navigate('/homegooddudes');
-    }
+
+const Homepage =() => { 
   return (
     <div>
       <Header/>
-        <button onClick = {toHomeVape}>VapeN'Hell</button>
-        <button onClick = {toHomeGoodDudes}>GoodDudes</button>
+        <div className = "home-container1">
+          <div className ='home-picture'/>
+          <div className ='home-picture1'/>
+        </div>
     </div>
   );
 }

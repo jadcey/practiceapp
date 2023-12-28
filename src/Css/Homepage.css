@@ -1,6 +1,46 @@
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
   }
-  
+.home-container1{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  color:aliceblue;
+  background-color: black;
+  height:100vh;
+  margin:0 auto;
+  padding:10px;
+}
+.home-picture{
+  background-image: url(../Pictures/VapeNhellLogo.jpg);
+  width: 40%;
+  height:40%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding:20px;
+  margin:50px;
+  transition: transform 0.3s ease;
+}
+.home-picture:hover {
+  transform: scale(1.2); 
+}
+.home-picture1{
+  background-image: url(../Pictures/GoodDudesLogo.jpg);
+  width: 40%;
+  height:40%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding:20px;
+  margin:50px;
+  transition: transform 0.3s ease;
+}
+
+.home-picture1:hover {
+  transform: scale(1.2); 
+}

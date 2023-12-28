@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 .header-body{
+    position: sticky; top: 0;
     height:50px;
     display:flex;
     justify-content: center;
@@ -12,6 +13,5 @@
 }
 .header-text{
     text-indent: 50px;
-    color:aliceblue;
-    
+    color:aliceblue;   
 }
