@@ -10,9 +10,11 @@ const HomeVape=()=>{
     return(
         <div>
             <Header/>
-            VapeN'Hell
-            <button onClick={homepage}>Home</button>
-        </div>
+            <div className = "homevape-container1">
+                <h1>VapeN'Hell</h1> 
+                <button onClick={homepage}>Home</button>
+            </div>
+        </div>       
     );
 }
 export default HomeVape;
