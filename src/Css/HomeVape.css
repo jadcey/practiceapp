@@ -5,12 +5,52 @@
 }
 .homevape-container1{
   display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  color:aliceblue;
+  background-color: white;
+  height:100vh;
+  margin:0 auto;
+  padding:10px;
+}
+.homevape-containerbox1{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  color:aliceblue;
+  background-color:blue;
+  height:100%;
+  width:50%;
+  margin:20px;
+  padding:30px 30px 30px 30px;
+  border-radius: 10%;
+}
+.homevape-containerbox2{
+  display: flex;
   flex-direction:column;
   align-items: center;
   justify-content: center;
   color:aliceblue;
   background-color: black;
-  height:100vh;
+  height:100%;
+  width:50%;
   margin:0 auto;
-  padding:10px;
+  padding:30px;
+}
+.homevape-containerbox3{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  color:aliceblue;
+  background-color: black;
+  height:100%;
+  width:50%;
+  margin:0 auto;
+  padding:30px;
+}
+.homevape-container4{
+
 }
