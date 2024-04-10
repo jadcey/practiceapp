@@ -3,42 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { AiFillFacebook,AiFillGoogleCircle,AiFillLinkedin } from 'react-icons/ai'
 import '../Css/LoginForm.css';
 
-
 const LoginForm = () => {
     const navigate = useNavigate();
-    const [isSignUpActive, setIsSignUpActive] = useState(false);
-
-    // const handleSignUpClick = () => {
-    //     const main = document.getElementById('main');
-    //     if (main) {
-    //         main.classList.add("right-panel-active");
-    //         setIsSignUpActive(true);
-    //     }
-    // };
-
-    // const handleSignInClick = () => {
-    //     const main = document.getElementById('main');
-    //     if (main) {
-    //         main.classList.remove("right-panel-active");
-    //         setIsSignUpActive(false);
-    //     }
-    // };
-    const handleSignUpClick = () => {
-        const main = document.getElementById('main');
-        if (main) {
-            main.classList.add("right-panel-active");
-            setIsSignUpActive(true);
-        }
-    };
-    
-    const handleSignInClick = () => {
-        const main = document.getElementById('main');
-        if (main) {
-            main.classList.remove("right-panel-active");
-            setIsSignUpActive(false);
-        }
-    };
-
+    const [isRightPanelActive, setIsRightPanelActive] = useState(false);
+    const signUpButtonHandler =()=>{
+        setIsRightPanelActive(false);
+    }
+    const signInButtonHandler = ()=>{
+        setIsRightPanelActive(true);
+    }
     const handleSignIn = () => {
         navigate('/login');
     };
@@ -46,11 +19,10 @@ const LoginForm = () => {
     return (
         <div className="loginform-body" id="main">
             <div className="loginform-container">
-                <div className={`loginform-signup ${isSignUpActive ? 'right-panel-active' : ''}`}>
+                <div className={`loginform-signin ${isRightPanelActive ? 'right-panel-active' : ''}`}>
                     <div className="loginform-form" action="#">
                         <div className="loginform-h1">Create Account</div>
                         <div className="loginform-social-container">
-                            {/* <a href={Facebook} className="loginform-social">Facebook</a> */}
                             <AiFillFacebook href="https://www.facebook.com/"className ="Loginform-social"/>
                             <AiFillGoogleCircle href="#"className = "Loginform-social"/>
                             <AiFillLinkedin href ="#"className = "Loginform-social"/>
@@ -62,13 +34,10 @@ const LoginForm = () => {
                         <button className="loginform-button">Sign Up</button>
                     </div>
                 </div>
-                <div className={`loginform-signin ${isSignUpActive ? '' : 'right-panel-active'}`}>
+                <div className={`loginform-signin ${isRightPanelActive ? 'right-panel-active' : ''}`}>
                     <div className="loginform-form" action="#">
                         <div className="loginform-h1">Sign In</div>
                         <div className="loginform-social-container">
-                            {/* <a href="#" className="loginform-social">Facebook</a> */}
-                            {/* <a href="#" className="loginform-social">Google</a>
-                            <a href="#" className="loginform-social">LinkedIn</a> */}
                             <AiFillFacebook href="https://www.facebook.com/"className ="Loginform-social"/>
                             <AiFillGoogleCircle href="#"className = "Loginform-social"/>
                             <AiFillLinkedin href ="#"className = "Loginform-social"/>
@@ -85,12 +54,12 @@ const LoginForm = () => {
                         <div className="loginform-overlay-left">
                             <div className="loginform-h1">Welcome Back!</div>
                             <div className="loginform-p">To keep connected with us please login with your personal info</div>
-                            <button className="loginform-button" id="signIn" onClick={handleSignInClick}>Sign In</button>
+                            <button className="loginform-button" id="signIn" onClick = {signUpButtonHandler}>Sign In</button>
                         </div>
                         <div className="loginform-overlay-right">
                             <div className="loginform-h1">Hello, Friend</div>
                             <div className="loginform-p">Enter your personal details and start your journey with us</div>
-                            <button className="loginform-button" id="signUp" onClick={handleSignUpClick}>Sign Up</button>
+                            <button className="loginform-button" id="signUp" onClick={signInButtonHandler} >Sign Up</button>
                         </div>
                     </div>
                 </div>
@@ -100,5 +69,3 @@ const LoginForm = () => {
 }
 
 export default LoginForm;
-
-            

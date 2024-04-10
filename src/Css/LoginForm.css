@@ -29,19 +29,20 @@
     top: 0;
     left: 0;
     height: 100%;
-    transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
+    transition: all transform 0.6s ease-in-out;
 }
 
 .loginform-signup {
     width: 50%;
-    transform: translateX(-100%);
     opacity: 0;
     z-index: 1;
+    transition: all transform 0.6s ease-in-out;
 }
 
 .loginform-signin {
     width: 50%;
     z-index: 2;
+    transition: all transform 0.6s ease-in-out;
 }
 
 .loginform-form {
@@ -107,19 +108,20 @@
     transform: scale(0.90);
 }
 
-#loginform-signIn, #loginform-signUp {
+#signIn, #signUp {
     background: transparent;
     border: 2px solid #fff;
 }
 
-.loginform-container.right-panel-active .loginform-signin {
+.loginform-container .right-panel-active .loginform-signin {
     transform: translateX(100%);
     opacity: 0;
 }
 
-.loginform-container.right-panel-active .loginform-signup {
+.loginform-container .right-panel-active .loginform-signup {
     transform: translateX(0%);
     opacity: 1;
+    z-index: 5;
 }
 
 .loginform-overlay-container {
@@ -133,7 +135,7 @@
     z-index: 100;
 }
 
-.loginform-container.right-panel-active .loginform-overlay-container {
+.loginform-container .right-panel-active .loginform-overlay-container {
     transform: translateX(-100%);
 }
 
@@ -149,7 +151,7 @@
     transition: transform 0.6s ease-in-out;
 }
 
-.loginform-container.right-panel-active .loginform-overlay {
+.loginform-container .right-panel-active .loginform-overlay {
     transform: translateX(50%);
 }
 
@@ -165,7 +167,7 @@
     height: 100%;
     width: 50%;
     transform: translateX(0);
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
 .loginform-overlay-left {
@@ -174,14 +176,14 @@
 
 .loginform-overlay-right {
     right: 0;
-    transform: translateX(0%);
+    transform: translateX(0);
 }
 
-.loginform-container.right-panel-active .loginform-overlay-left {
-    transform: translateX(0%);
+.loginform-container .right-panel-active .loginform-overlay-left {
+    transform: translateX(0);
 }
 
-.loginform-container.right-panel-active .loginform-overlay-right {
+.loginform-container .right-panel-active .loginform-overlay-right {
     transform: translateX(20%);
 }
 
