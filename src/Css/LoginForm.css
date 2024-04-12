@@ -22,26 +22,18 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
 }
 
-.loginform-signup, .loginform-signin {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transition: all transform 0.6s ease-in-out;
+.auth-form {
+    display : flex;
 }
 
 .loginform-signup {
     width: 50%;
     opacity: 0;
     z-index: 1;
-    transition: all transform 0.6s ease-in-out;
-}
-
-.loginform-signin {
-    width: 50%;
-    z-index: 2;
     transition: all transform 0.6s ease-in-out;
 }
 
@@ -113,10 +105,8 @@
     border: 2px solid #fff;
 }
 
-.loginform-container .right-panel-active .loginform-signin {
-    transform: translateX(100%);
-    opacity: 0;
-}
+
+
 
 .loginform-container .right-panel-active .loginform-signup {
     transform: translateX(0%);
@@ -127,35 +117,47 @@
 .loginform-overlay-container {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 50%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     transition: transform 0.6s ease-in-out;
     z-index: 100;
+    transform: translateX(400px);
 }
 
-.loginform-container .right-panel-active .loginform-overlay-container {
-    transform: translateX(-100%);
+.loginform-overlay-container.moved {
+    transform: translateX(-400px);
 }
 
 .loginform-overlay {
     position: relative;
     color: #fff;
     background: #ff416c;
-    left: -100%;
     height: 100%;
-    width: 200%;
     background: linear-gradient(to right, #ff4b28, #ff228c);
-    transform: translateX(0);
     transition: transform 0.6s ease-in-out;
 }
+
 
 .loginform-container .right-panel-active .loginform-overlay {
     transform: translateX(50%);
 }
 
-.loginform-overlay-left, .loginform-overlay-right {
+.loginform-overlay-left {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(-400px);
+    transition: transform 0.6s ease-in-out;
+}
+.loginform-overlay-right{
     position: absolute;
     display: flex;
     align-items: center;
@@ -170,8 +172,9 @@
     transition: transform 0.6s ease-in-out;
 }
 
+
 .loginform-overlay-left {
-    transform: translateX(-20%);
+    transform: translateX(0);
 }
 
 .loginform-overlay-right {
@@ -200,4 +203,38 @@
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 50%;
+}
+.loginform-button-tentative{
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
