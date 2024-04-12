@@ -7,7 +7,7 @@ const LoginForm = () => {
     const navigate = useNavigate();
     const [isOverlayMoved, setIsOverlayMoved] = useState(false);
     const handleSignIn = () => {
-        navigate('/login');
+        navigate('/home');
     };
 
     return (
@@ -59,20 +59,6 @@ const LoginForm = () => {
                         </div>       
                     </div>
                 </div>
-                {/* <div className="loginform-overlay-container">
-                    <div className="loginform-overlay">
-                        <div className="loginform-overlay-left">
-                            <div className="loginform-h1">Welcome Back!</div>
-                            <div className="loginform-p">To keep connected with us please login with your personal info</div>
-                            <button className="loginform-button" id="signIn" onClick={() => setOnShift(false)}>Sign In</button>
-                        </div>
-                        <div className="loginform-overlay-right">
-                            <div className="loginform-h1">Hello, Friend</div>
-                            <div className="loginform-p">Enter your personal details and start your journey with us</div>
-                            <button className="loginform-button" id="signUp" onClick={() => setOnShift(true)}>Sign Up</button>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </div>
     );

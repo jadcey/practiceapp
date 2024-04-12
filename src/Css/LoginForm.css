@@ -211,17 +211,17 @@
 
 .button-62 {
   background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  margin:20px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 20px;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
+  font-size: 12px;
+  font-weight: bold;
   outline: transparent;
-  padding: 0 1rem;
+  padding: 12px 55px;
+  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   transition: box-shadow .2s ease-in-out;
