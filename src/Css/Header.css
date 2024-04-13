@@ -4,14 +4,22 @@
     box-sizing: border-box;
 }
 .header-body{
-    position: sticky; top: 0;
+    position: sticky; 
+    padding: 20px;
+    top: 0;
     height:50px;
     display:flex;
     justify-content: center;
     align-items:center;
-    background-color: black;
+    background-color: blue;
 }
 .header-text{
     text-indent: 50px;
     color:aliceblue;   
+    cursor:pointer;
+    padding:10px;
+    margin:10px;
+}
+.header-icon{
+    margin-right:auto;
 }
