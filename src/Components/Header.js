@@ -1,5 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 import { DiCodeigniter } from "react-icons/di"
+import '../Css/Header.css';
 const Header = ()=>{
     const navigate = useNavigate();
     const toHomeVape = () => {
@@ -13,16 +14,18 @@ const Header = ()=>{
     }
     return(
         <div className = "header-body">
-            <div className = "header-icon">
+            <div className="header-icon1">
                 <DiCodeigniter/>
-                <div className="header-text">Name</div>
-                <div className="header-text">Email</div>
             </div>
-            <div className = "header-text" onClick={toHome}>Home</div>
-            <div className = "header-text" onClick={toHomeVape}>VapeN'Hell</div>
-            <div className = "header-text" onClick={toHomeGoodDudes}>Good Dudes</div>
-            <div className = "header-text">Contact Us</div>
-            <div className = "header-text">Reviews</div>
+            <div className = "header-icon">
+                <div className = "header-text">Email</div>
+                <div className = "header-text">Name</div>
+            </div>
+            <div className="header-container">
+                <div className = "header-text" onClick={toHome}>Home</div>
+                <div className = "header-text" onClick={toHomeVape}>VapeN'Hell</div>
+                <div className = "header-text" onClick={toHomeGoodDudes}>Good Dudes</div>
+            </div>       
         </div>
     );
 }

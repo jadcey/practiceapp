@@ -7,19 +7,39 @@
     position: sticky; 
     padding: 20px;
     top: 0;
-    height:50px;
+    height:70px;
     display:flex;
+    flex-direction:row;
     justify-content: center;
     align-items:center;
-    background-color: blue;
+    background-color:black;
+}
+.header-container{
+    width:80%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:auto;
+}
+.header-icon{
+    margin-right:auto;
 }
 .header-text{
     text-indent: 50px;
     color:aliceblue;   
     cursor:pointer;
-    padding:10px;
-    margin:10px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
 }
-.header-icon{
+
+.header-icon1{
     margin-right:auto;
+    left:30px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    color:white;
 }

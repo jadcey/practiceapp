@@ -19,17 +19,10 @@ const HomeVape=()=>{
                     <div>
                         picture
                     </div>
-                    <div className = "homevape-containerbox3">
-                        <img src={vapepen} alt ="vapepenlogo"/>
-                            picture
-                        </div>
-                        <div>
-                            picture
-                        </div>
-                    </div>
                 </div>
-                {/* <button onClick={homepage}>Home</button> */}
-            </div>     
+                <button onClick={homepage}>Home</button>
+            </div>
+        </div>     
     );
 }
 export default HomeVape;
