@@ -12,20 +12,25 @@ const Header = ()=>{
     const toHome = () =>{
         navigate('/home');
     }
+    const toReview = () =>{
+        navigate('/review');
+    }
+    const toAboutUs = () =>{
+        navigate('/aboutus');
+    }
     return(
         <div className = "header-body">
-            <div className="header-icon1">
-                <DiCodeigniter/>
+            <div className = "header-container">
+                <DiCodeigniter/>Logo
             </div>
-            <div className = "header-icon">
-                <div className = "header-text">Email</div>
-                <div className = "header-text">Name</div>
+            <div className = "header-text-container">
+                <div className = "header-text" onClick={toHome}>Home</div>    
+                <div className = "header-text"onClick={toHomeVape}>VapeN'Hell</div>    
+                <div className = "header-text"onClick={toHomeGoodDudes}>Good Dudes</div>    
+                <div className = "header-text"onClick={toReview}>Reviews</div>    
+                <div className = "header-text"onClick={toAboutUs}>About Us</div> 
             </div>
-            <div className="header-container">
-                <div className = "header-text" onClick={toHome}>Home</div>
-                <div className = "header-text" onClick={toHomeVape}>VapeN'Hell</div>
-                <div className = "header-text" onClick={toHomeGoodDudes}>Good Dudes</div>
-            </div>       
+            <div className = "header-end">Sign In</div>
         </div>
     );
 }
