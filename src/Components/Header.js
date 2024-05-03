@@ -18,6 +18,9 @@ const Header = ()=>{
     const toAboutUs = () =>{
         navigate('/aboutus');
     }
+    const toSignIn = () =>{
+        navigate('/login');
+    }
     return(
         <div className = "header-body">
             <div className = "header-container">
@@ -25,12 +28,12 @@ const Header = ()=>{
             </div>
             <div className = "header-text-container">
                 <div className = "header-text" onClick={toHome}>Home</div>    
-                <div className = "header-text"onClick={toHomeVape}>VapeN'Hell</div>    
-                <div className = "header-text"onClick={toHomeGoodDudes}>Good Dudes</div>    
-                <div className = "header-text"onClick={toReview}>Reviews</div>    
-                <div className = "header-text"onClick={toAboutUs}>About Us</div> 
+                <div className = "header-text" onClick={toHomeVape}>VapeN'Hell</div>    
+                <div className = "header-text" onClick={toHomeGoodDudes}>Good Dudes</div>    
+                <div className = "header-text" onClick={toReview}>Reviews</div>    
+                <div className = "header-text" onClick={toAboutUs}>About Us</div> 
             </div>
-            <div className = "header-end">Sign In</div>
+            <div className = "header-end" onClick={toSignIn}>Sign In</div>
         </div>
     );
 }
